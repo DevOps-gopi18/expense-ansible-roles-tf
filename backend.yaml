@@ -1,0 +1,5 @@
+- name: configure backend and install
+  hosts: backend
+  become: yes
+  roles:
+  - backend

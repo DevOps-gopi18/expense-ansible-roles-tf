@@ -1,0 +1,7 @@
+- name: "configure {{ COMPONENT }} and install"
+  hosts: all
+  become: yes
+  var_files:
+  - "variables-{{ ENVIRONMENT }}.yaml"
+  roles:
+  - "{{ COMPONENT }}"
