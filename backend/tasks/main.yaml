@@ -42,11 +42,11 @@
     path: /app
 
 - name: copy backend service
-  ansible.builtin.copy:
-    src: backend.service
+  ansible.builtin.template: #it will search in templates folder
+    src: backend.service.j2
     dest: /etc/systemd/system/backend.service
 
-- name: install MySQL libraries
+- name: install python libraries
   ansible.builtin.pip:
     name: "{{ item }}"
     executable: pip3.9
