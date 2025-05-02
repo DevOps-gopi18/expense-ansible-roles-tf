@@ -1,3 +1,4 @@
+MYSQL_HOST: "mysql-{{ ENVIRONMENT }}.gopisg18.online"
 MYSQL_USER: root
 MYSQL_PASSWORD: ExpenseAPP1
 APP_LOCAION: /app
